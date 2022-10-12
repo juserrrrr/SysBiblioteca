@@ -1,10 +1,12 @@
+import LoginPage from "./pages/login/LoginPage"
+
+
+
 
 function App() {
   return(
-    <>
-    <h1>Read to code!</h1>
-    </>
+    <LoginPage />
   )
-}
+} 
 
 export default App
