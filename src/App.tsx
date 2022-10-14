@@ -1,11 +1,11 @@
-import LoginPage from "./pages/login/LoginPage"
+import RoutesSys from "./routes/RoutesSys"
 
 
 
 
 function App() {
   return(
-    <LoginPage />
+    <RoutesSys/>
   )
 } 
 
