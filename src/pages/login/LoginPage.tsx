@@ -2,8 +2,6 @@ import { CssBaseline, Button, Typography, TextField, InputAdornment, Divider, Ci
 import { AlternateEmail, Book, LockOpen } from '@mui/icons-material'
 import { Box } from "@mui/system"
 import React,{ FormEvent, useState } from "react"
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
-
 
 
 function LoginPage() {
@@ -29,19 +27,19 @@ function LoginPage() {
         >
           <Box sx={{width:'800px',height:'400px',display:'flex'}}>
 
-            <Box sx={{width:'50%',display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <Box sx={{width:'30%',display:'flex',alignItems:'center',justifyContent:'center'}}>
               <Book sx={{fontSize:'200px',color:'white'}} />
             </Box>
 
             <Divider orientation="vertical" flexItem sx={{margin:'5%'}}/>
             
-            <Box sx={{width:'50%',alignItems:"center",display:'flex',justifyContent:'center'}}>
+            <Box sx={{width:'70%',alignItems:"center",display:'flex',justifyContent:'center'}}>
               <Box sx={{width:'100%',height:'70%',flexDirection:'column',alignItems:'center',display:'flex',bgcolor:'white',borderRadius:'30px',textAlign:'center'}}>
                 <Typography variant="h4" margin={2}>
                   Login
                 </Typography>
 
-                <Box component='form' autoComplete="off" onSubmit={handleSubmit} sx={{'& .MuiTextField-root': { m: 1, width: '35ch' },flexDirection: 'column',}}>
+                <Box component='form' autoComplete="off" onSubmit={handleSubmit} sx={{'& .MuiTextField-root': { m: 1, width: '35ch' },'& .MuiButton-root': { m: 1, width: '30ch' },flexDirection: 'column',}}>
                   <TextField
                     type='email'
                     label='Email'
@@ -70,6 +68,7 @@ function LoginPage() {
                         </InputAdornment>),}}
                   />
                   <Button 
+                    disableElevation
                     type="submit"
                     variant="contained" 
                     color="primary"
